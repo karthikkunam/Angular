@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <link rel="icon" href="data:;base64,iVBORw0KGgo="> <!-- to get rid of favicon issue due to empty cache -->
+        <link rel="icon" href="images/user_accept.png">
+        <title>Employee Retention</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+        <link type="text/css" rel="stylesheet" href="lib/font-awesome.min.css">
+        <link type="text/css" rel="stylesheet" href="lib/bootstrap.min.css">   
+        <link type="text/css" rel="stylesheet" href="lib/nv.d3.min.css">
+        <link type="text/css" rel="stylesheet" href="css/hr.css">
+        
+        <script src="lib/angular.min.js" type="text/javascript"></script>
+        <script src="lib/ui-bootstrap-2.2.0.min.js" type="text/javascript"></script>
+        <script src="lib/angular-ui-router.min.js" type="text/javascript"></script>
+        <script src="lib/d3.js" charset="utf-8"></script> 
+        <script type='text/javascript' src="lib/nv.d3.min.js"></script>
+        <script type='text/javascript' src="lib/angular-nvd3.min.js"></script>
+        
+    </head>
+    <body ng-app="hr" ng-controller="hrcontroller">
+        <nav  id ="menubar" role="navigation" class="navbar navbar-default navbar-fixed-top"> 
+            <div class="navbar-header">
+                <div class="col-md-4">
+                    <img id="logo" height="25" src="images/KLA_Logo_small.png" alt="KLA Tencor" > 
+                </div>
+                <div class="col-md-8">
+                    <div id="projectName">{{ title }}</div>
+                </div> 
+            </div> 
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="col-md-6">
+                    <ul class="nav navbar-nav">
+                        <li ng-class="{active: tab === 'top'}"><a ui-sref="home" ng-click="tab = 'top'">Dashboard</a></li>
+                        <li ng-class="{active: tab === 'details'}"><a ui-sref="person" ng-click="tab = 'details'">Details</a></li> 
+                        <li ng-class="{active: tab === 'help'}"><a ng-click="tab = 'help'">Help</a></li>
+                    </ul> 
+                </div>
+                <div class="col-md-2"></div>
+                <ul class="nav navbar-nav navbar-right"> 
+                    <li ng-class="{active: tab === 'admin'}" class="admin_item"><a ng-click="tab = 'admin'"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></li>
+                </ul>   
+                
+            </div>
+        </nav>
+        <div ui-view class="ng-cloak"></div>  <!-- ui-router -->
+
+        <script type='text/javascript' src="js/hr.js"></script>
+        <script type='text/javascript' src="js/route.js"></script>
+        <script type='text/javascript' src="js/TablesDirectives.js"></script>
+        <script type='text/javascript' src="js/controller/hrcontroller.js"></script>
+        <script type='text/javascript' src="js/controller/dashboardController.js"></script>
+        <script type='text/javascript' src="js/controller/personController.js"></script>
+        <script type='text/javascript' src="js/controller/groupController.js"></script>
+    </body>
+</html>

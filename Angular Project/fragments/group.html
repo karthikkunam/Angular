@@ -1,0 +1,20 @@
+<div class='container'>
+    <div class='row'>
+        <div class='empDetails col-sm-4'>
+            <h3>Attrition Risk</h3>
+            {{ Group.name }} ({{ Group.groupId }})
+            <div id='chart'>
+                <div id='detailsChart'></div>
+            </div>
+        </div>
+        <div class='empDetails col-sm-4'>
+            <h3>Profile</h3>
+            Employee ID: {{ Group.groupId }}<br>
+            Start Date: {{ Group.startDate }}<br>
+            End Date: {{ Group.termDate }}<br>
+        </div>
+        <div class='empDetails col-sm-4'>
+            <h3>Members</h3>
+        </div>
+    </div>
+</div>

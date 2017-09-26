@@ -1,0 +1,13 @@
+<table class="table table-striped">
+    <tr>
+        <th class="topItemHeadLeft" ng-show='entity==="group"'>Group</th>
+        <th class="topItemHeadLeft" ng-hide='entity==="group"'>Name</th>
+        <th class="topItemHeadCenter">Risk</th>
+        <th class="topItemHeadCenter" ng-hide="list==='risk'">Reason</th>
+    </tr>
+    <tr ng-repeat="item in data | limitTo: 5">
+        <td class='topItemName'><a href="#" ui-sref="{{ entity }}">{{ item.name }} {{ tab }}</a></td>
+        <td>{{ item.value }}%</td>
+        <td ng-hide="list==='risk'">{{ item.reason }}</td>
+    </tr>
+</table>

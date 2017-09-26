@@ -1,0 +1,55 @@
+<div class='container' style="width: 100%">
+    <div class="row">
+        <div class='empDetails col-sm-8'>
+            <nvd3 options="trendOptions" data="trendData" class="with-3d-shadow with-transitions"></nvd3>
+        </div>
+        <div class='empDetails col-sm-4'>
+            <nvd3 options="distOptions" data="distData" class="with-3d-shadow with-transitions"></nvd3>
+        </div>
+    </div>
+    <div class="row" style="width: 100%">
+        <div class='empDetails col-sm-1'>
+
+        </div>
+        <div class='empDetails col-sm-3'>
+            <h3>Highest Risk</h3>
+        </div>
+        <div class='empDetails col-sm-4'>
+            <h3>Rate of Risk Change</h3>
+        </div>
+        <div class='empDetails col-sm-4'>
+            <h3>Risk Compared to Peers</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class='empDetails col-sm-1'>
+            <h3>Group</h3>
+        </div>
+        <div class='empDetails col-sm-3'>
+            <top-items-table data="topRisk.group.risk" entity="group" list="risk"></top-items-table>
+        </div>
+        <div class='empDetails col-sm-4'>
+            <top-items-table data="topRisk.group.trend" entity="group" list="trend"></top-items-table>
+        </div>
+        <div class='empDetails col-sm-4'>
+            <top-items-table data="topRisk.group.compare" entity="group" list="compare"></top-items-table>
+        </div>
+    </div>
+    <div class="row">
+        <div class='empDetails col-sm-12' style="height: 32px;">&nbsp;</div>
+    </div>
+    <div class="row">
+        <div class='empDetails col-sm-1'>
+            <h3>Individuals</h3>
+        </div>
+        <div class='empDetails col-sm-3'>
+            <top-items-table data="topRisk.person.risk" entity="person" list="risk"></top-items-table>
+        </div>
+        <div class='empDetails col-sm-4'>
+            <top-items-table data="topRisk.person.trend" entity="person" list="trend"></top-items-table>
+        </div>
+        <div class='empDetails col-sm-4'>
+            <top-items-table data="topRisk.person.compare" entity="person" list="compare"></top-items-table>
+        </div>
+    </div>
+</div>
